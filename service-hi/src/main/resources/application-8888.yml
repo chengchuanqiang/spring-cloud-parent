@@ -1,0 +1,9 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://test1:1111/eureka/
+server:
+  port: 8888
+spring:
+  application:
+    name: service-hi

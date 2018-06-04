@@ -1,0 +1,10 @@
+server:
+  port: 2222
+eureka:
+  instance:
+    hostname: test2
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://test1:1111/eureka/
