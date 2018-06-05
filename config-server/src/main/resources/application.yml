@@ -10,7 +10,7 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/forezp/SpringcloudConfig/
-          search-paths: respo
+          uri: https://github.com/chengchuanqiang/spring-cloud-parent
+          search-paths: springcloud-config
 server:
   port: 5555
