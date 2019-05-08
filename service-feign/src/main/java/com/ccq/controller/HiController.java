@@ -10,18 +10,23 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 /**
- * Created by aladdinet on 2018/6/4.
+ * @author chengchuanqiang
+ * @date 2018/6/4
  */
 @RestController
 public class HiController {
 
+    private final ServiceHi serviceHi;
+
     @Autowired
-    ServiceHi serviceHi;
+    public HiController(ServiceHi serviceHi) {
+        this.serviceHi = serviceHi;
+    }
 
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
     public String sayHi(@RequestParam String name) {
 
-        System.out.println("service fegin " + new Date());
+        System.out.println("service feign " + new Date());
 
         return serviceHi.sayHiFromClientOne(name);
     }

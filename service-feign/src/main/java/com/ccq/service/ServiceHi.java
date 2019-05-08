@@ -6,11 +6,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * Created by aladdinet on 2018/6/4.
+ * @author chengchuanqiang
+ * @date 2018/6/4
  */
 @FeignClient(value = "service-hi")
 public interface ServiceHi {
 
+    /**
+     * 调用service-hi
+     *
+     * @param name name
+     * @return string
+     */
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
     String sayHiFromClientOne(@RequestParam(value = "name") String name);
 }
