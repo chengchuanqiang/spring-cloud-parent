@@ -9,19 +9,23 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 /**
- * Created by aladdinet on 2018/6/1.
+ *
+ * @author chengchuanqiang
+ * @date 2018/6/1
  */
 @RestController
-public class HelloControler {
+public class HelloController {
+
+    private final HelloService helloService;
 
     @Autowired
-    HelloService helloService;
+    public HelloController(HelloService helloService) {
+        this.helloService = helloService;
+    }
 
     @RequestMapping(value = "/hi")
     public String hi(@RequestParam String name) {
-
         System.out.println("service ribbon " + new Date());
-
         return helloService.hiService(name);
     }
 }
