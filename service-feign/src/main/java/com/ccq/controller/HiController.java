@@ -1,6 +1,6 @@
 package com.ccq.controller;
 
-import com.ccq.service.ServiceHi;
+import com.ccq.service.HiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,11 +16,11 @@ import java.util.Date;
 @RestController
 public class HiController {
 
-    private final ServiceHi serviceHi;
+    private final HiService hiService;
 
     @Autowired
-    public HiController(ServiceHi serviceHi) {
-        this.serviceHi = serviceHi;
+    public HiController(HiService hiService) {
+        this.hiService = hiService;
     }
 
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
@@ -28,6 +28,6 @@ public class HiController {
 
         System.out.println("service feign " + new Date());
 
-        return serviceHi.sayHiFromClientOne(name);
+        return hiService.sayHiFromClientOne(name);
     }
 }

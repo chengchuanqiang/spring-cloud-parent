@@ -15,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableEurekaClient
 @EnableDiscoveryClient
 @SpringBootApplication
+@EnableHystrix
 public class ServiceRibbonApplication {
 
     public static void main(String[] args) {
