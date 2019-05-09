@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 /**
- * Created by aladdinet on 2018/6/4.
+ *
+ * @author chengchuanqiang
+ * @date 2018/6/4
  */
 @Component
 public class MyFilter extends ZuulFilter {
