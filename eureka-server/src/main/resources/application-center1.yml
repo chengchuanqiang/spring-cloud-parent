@@ -1,0 +1,14 @@
+server:
+  port: 1001
+eureka:
+  instance:
+    hostname: center1
+  client:
+    registerWithEureka: true # true表示将自己注册为一个服务
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://center2:1002/eureka/,http://center3:1003/eureka/
+
+spring:
+  application:
+    name: eureka-server

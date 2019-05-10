@@ -1,0 +1,14 @@
+server:
+  port: 1002
+eureka:
+  instance:
+    hostname: center2
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://center1:1001/eureka/,http://center3:1003/eureka/
+
+spring:
+  application:
+    name: eureka-server
